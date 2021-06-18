@@ -1,0 +1,444 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d1117;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    box-shadow: 0 0 4px 4px #777;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    color: #bcd4f0;
+}
+
+.navbar-links > ul > li > a {
+    text-decoration: none;
+    color: #777;
+    display: inline-block;
+    margin: 10px;
+    padding: 3px;
+    font-size: 23px;
+
+    height: 100%;
+}
+
+.right {
+    margin-right: 5rem;
+}
+
+.navbar-links > ul > li > a:hover {
+    color: #ffeee6;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* body*/
+
+.content {
+    font-family: 'Rokkitt', serif;
+    background: #ffeee6;
+    max-width: 650px;
+    border-radius: 24px;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 2rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Arima Madurai', cursive;
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 1rem;
+    line-height: 1.1;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.right {
+    margin-right: 5rem;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #777;
+    border-radius: 2rem;
+    height: 500px;
+    max-width: 1000px;
+    margin-top: 2rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+   
+}
+
+img {
+    display: block;
+    width: 40%;
+    margin: 3rem auto 1rem auto;
+
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.btn > a > button:hover {
+    background: #f1a886;
+}
+
+.btn > a > button {
+    font-family: 'Recursive', sans-serif;
+    width: 15rem;
+    height: 4rem;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #fdbeed;
+    color: #003300;
+}
+
+.filled-heart {
+    height: auto;
+    margin-right: 6px;
+}
+
+/* count starts here */
+.cont-count{
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.count-box{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.count-box .icon{
+    font-size: 100px;
+    color: #8de7ab;
+}
+.count-box-heading{
+    font-size: 40px;
+    color: #8de7ab;
+}
+
+.count-box-descrip{
+    font-size: 30px;
+    color: #fdbeed;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* card strtas here */
+
+.cardhead{
+    color: #ffeee6;
+    padding-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 3px;
+    letter-spacing: 0.3rem;
+}
+
+.cardhead::after{
+    content: '';
+    height: 5px;
+    width: 14%;
+    background: #4392ec;
+    position: absolute;
+    left: calc(53% - 10%);
+    bottom: -2px;
+}
+
+.container{
+    display: flex;
+    
+
+    flex-direction: row;
+    margin: 37px;
+    padding-bottom: 40px;
+    justify-content: space-around;
+    background: #0d1117;
+    padding-top: 7px;
+
+}
+
+.cards{
+    background: #ffeee6;
+    box-shadow: #696464;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    text-align: center;
+  
+    border-radius: 20px;
+    transition: all 2s;
+    height: fit-content;
+    margin: 26px;
+}
+
+.cards:hover{
+    transform: translateY(25px);
+    background-color: rgb(212, 205, 194);
+}
+
+.card-item1{
+    width: 100%;
+    height: 75%;
+}
+
+.imgcard{
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+}
+
+
+.card-item3 > p {
+    color: #0d1117;
+}
+
+.title1{
+    font-family: 'Arima Madurai', cursive;
+    color: #0d1117;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 1rem;
+    line-height: 1.1;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.middle-sect-btn{
+    background-color: #003300;
+    margin-top: 8px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+}   
+
+/* make it Responsive*/
+@media screen and (max-width:950px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(autofit, minmax(300px, 1fr));
+        gap: 1rem;
+        place-items: center;
+    
+        flex-direction: row;
+        margin: 37px;
+        padding-bottom: 40px;
+        justify-content: space-around;
+        background: #0d1117;
+        padding-top: 7px;
+    
+    }
+    .cont-count{
+        flex-direction: column;
+    }
+    .count-box .icon {
+        font-size: 89px;
+       
+    }
+    .count-box-descrip {
+        font-size: 23px;
+       
+    }
+    .count-box-heading {
+        font-size: 35px;
+        
+    }
+}
+
+/* footer starts here */
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000c00;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}
+
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.fa-facebook:hover {
+    color: #385898;
+}
+
+.fa-twitter:hover {
+    color: rgb(29, 161, 242);
+}
+
+.fa-youtube:hover {
+    color: red;
+}
+
+.fa-linkedin:hover {
+    color: #385898;}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
